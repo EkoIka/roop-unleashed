@@ -41,4 +41,4 @@ BATCH_IMAGE_CHAIN_PROCESSOR = None
 
 CFG: Settings = None
 
-
+tests = True
