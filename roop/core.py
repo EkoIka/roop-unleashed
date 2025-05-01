@@ -97,7 +97,7 @@ def decode_execution_providers(execution_providers: List[str]) -> List[str]:
 def set_execution_provider(execution_provider: str):
     longname = decode_execution_providers([execution_provider])[0]
     allproviders = onnxruntime.get_available_providers()
-    unsupported = ['TensorrtExecutionProvider']
+    unsupported = ['CUDAExecutionProvider']
     filtered = filter(lambda i: i not in unsupported, allproviders)
     allproviders = list(filtered)
     if allproviders[0] != longname:
