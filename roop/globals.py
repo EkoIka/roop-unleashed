@@ -5,7 +5,7 @@ source_path = None
 target_path = None
 output_path = None
 target_folder_path = None
-
+server_share=true
 frame_processors: List[str] = []
 keep_fps = None
 keep_frames = None
