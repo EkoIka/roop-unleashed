@@ -23,7 +23,7 @@ def get_face_analyser() -> Any:
         if FACE_ANALYSER is None:
             if roop.globals.CFG.force_cpu:
                 print('Forcing CPU for Face Analysis')
-                FACE_ANALYSER = insightface.app.FaceAnalysis(name='buffalo_l', providers=['CPUExecutionProvider'])
+                FACE_ANALYSER = insightface.app.FaceAnalysis(name='buffalo_l', providers=['CUDAExecutionProvider'])
             else:
                 FACE_ANALYSER = insightface.app.FaceAnalysis(name='buffalo_l', providers=roop.globals.execution_providers)
             FACE_ANALYSER.prepare(ctx_id=0, det_size=(640, 640) if roop.globals.default_det_size else (320,320))
